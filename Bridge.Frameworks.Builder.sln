@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge.Contract", "..\Build
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge.Translator", "..\Builder\Translator\Bridge.Translator.csproj", "{44124331-C60A-4071-B387-4B8E71324B10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge.Famous0", "..\Frameworks\Famous0\Bridge.Famous0.csproj", "{DEFD9C86-BD2C-496F-8168-4C7E391A73AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{44124331-C60A-4071-B387-4B8E71324B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44124331-C60A-4071-B387-4B8E71324B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44124331-C60A-4071-B387-4B8E71324B10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFD9C86-BD2C-496F-8168-4C7E391A73AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEFD9C86-BD2C-496F-8168-4C7E391A73AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEFD9C86-BD2C-496F-8168-4C7E391A73AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEFD9C86-BD2C-496F-8168-4C7E391A73AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,5 +82,6 @@ Global
 		{99DECD28-D3E3-4EA7-ACAE-AB5DFC9913BD} = {32B4E540-81E6-4E3F-8383-5813786DC899}
 		{52AE9E3E-6929-4720-AB7A-F9F22B9A8972} = {47D6D365-36CE-43C2-91D0-5A071928C62A}
 		{44124331-C60A-4071-B387-4B8E71324B10} = {47D6D365-36CE-43C2-91D0-5A071928C62A}
+		{DEFD9C86-BD2C-496F-8168-4C7E391A73AF} = {7C762820-1165-4EB4-B7A3-3BB45DF33CE7}
 	EndGlobalSection
 EndGlobal

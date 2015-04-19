@@ -9,7 +9,7 @@ namespace Bridge.Html5
     /// </summary>
     [Ignore]
     [Name("Node")]
-    public class Node : EventTarget
+    public class Node : EventTarget, INode
     {
         protected internal Node()
         {
