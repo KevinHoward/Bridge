@@ -2,6 +2,7 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
 
 using Bridge;
+using System.Collections.Generic;
 
 namespace Bridge.Html5
 {
@@ -29,20 +30,7 @@ namespace Bridge.Html5
         /// <param name="y">The y axis of the coordinate for the rectangle starting point.</param>
         /// <param name="width">The rectangle's width.</param>
         /// <param name="height">The rectangle's height.</param>
-        public virtual void ClearRect(uint x, uint y, uint width, uint height)
-        {
-            return;
-        }
-
-        /// <summary>
-        /// Sets all pixels in the rectangle defined by starting point (x, y) and size (width, height)
-        /// to transparent black, erasing any previously drawn content.
-        /// </summary>
-        /// <param name="x">The x axis of the coordinate for the rectangle starting point.</param>
-        /// <param name="y">The y axis of the coordinate for the rectangle starting point.</param>
-        /// <param name="width">The rectangle's width.</param>
-        /// <param name="height">The rectangle's height.</param>
-        public virtual void ClearRect(int x, int y, int width, int height)
+        public virtual void ClearRect(Any<uint, int> x, Any<uint, int> y, Any<uint, int> width, Any<uint, int> height)
         {
             return;
         }
@@ -54,19 +42,7 @@ namespace Bridge.Html5
         /// <param name="y">The y axis of the coordinate for the rectangle starting point.</param>
         /// <param name="width">The rectangle's width.</param>
         /// <param name="height">The rectangle's height.</param>
-        public virtual void FillRect(uint x, uint y, uint width, uint height)
-        {
-            return;
-        }
-
-        /// <summary>
-        /// Draws a filled rectangle at (x, y) position whose size is determined by width and height.
-        /// </summary>
-        /// <param name="x">The x axis of the coordinate for the rectangle starting point.</param>
-        /// <param name="y">The y axis of the coordinate for the rectangle starting point.</param>
-        /// <param name="width">The rectangle's width.</param>
-        /// <param name="height">The rectangle's height.</param>
-        public virtual void FillRect(int x, int y, int width, int height)
+        public virtual void FillRect(Any<uint, int> x, Any<uint, int> y, Any<uint, int> width, Any<uint, int> height)
         {
             return;
         }
@@ -79,20 +55,7 @@ namespace Bridge.Html5
         /// <param name="y">The y axis of the coordinate for the rectangle starting point.</param>
         /// <param name="width">The rectangle's width.</param>
         /// <param name="height">The rectangle's height.</param>
-        public virtual void StrokeRect(uint x, uint y, uint width, uint height)
-        {
-            return;
-        }
-
-        /// <summary>
-        /// Paints a rectangle which has a starting point at (x, y) and has a w width and an h height
-        /// onto the canvas, using the current stroke style.
-        /// </summary>
-        /// <param name="x">The x axis of the coordinate for the rectangle starting point.</param>
-        /// <param name="y">The y axis of the coordinate for the rectangle starting point.</param>
-        /// <param name="width">The rectangle's width.</param>
-        /// <param name="height">The rectangle's height.</param>
-        public virtual void StrokeRect(int x, int y, int width, int height)
+        public virtual void StrokeRect(Any<uint, int> x, Any<uint, int> y, Any<uint, int> width, Any<uint, int> height)
         {
             return;
         }
@@ -120,26 +83,7 @@ namespace Bridge.Html5
         /// available or if a reasonably readable one can be synthesized by scaling the current
         /// font horizontally) or a smaller font.
         /// </param>
-        public virtual void FillText(string text, uint x, uint y, uint? maxWidth = null)
-        {
-            return;
-        }
-
-        /// <summary>
-        /// Draws (fills) a given text at the given (x,y) position.
-        /// </summary>
-        /// <param name="text">
-        /// The text to render using the current font, textAlign, textBaseline, and direction values.
-        /// </param>
-        /// <param name="x">The x axis of the coordinate for the text starting point.</param>
-        /// <param name="y">The y axis of the coordinate for the text starting point.</param>
-        /// <param name="maxWidth">
-        /// The maximum width to draw. If specified, and the string is computed to be wider than
-        /// this width, the font is adjusted to use a more horizontally condensed font (if one is
-        /// available or if a reasonably readable one can be synthesized by scaling the current
-        /// font horizontally) or a smaller font.
-        /// </param>
-        public virtual void FillText(string text, int x, int y, int? maxWidth = null)
+        public virtual void FillText(string text, Any<uint, int> x, Any<uint, int> y, Any<uint?, int?> maxWidth = null)
         {
             return;
         }
@@ -158,26 +102,7 @@ namespace Bridge.Html5
         /// available or if a reasonably readable one can be synthesized by scaling the current
         /// font horizontally) or a smaller font.
         /// </param>
-        public virtual void StrokeText(string text, uint x, uint y, uint? maxWidth = null)
-        {
-            return;
-        }
-
-        /// <summary>
-        /// Draws (strokes) a given text at the given (x, y) position.
-        /// </summary>
-        /// <param name="text">
-        /// The text to render using the current font, textAlign, textBaseline, and direction values.
-        /// </param>
-        /// <param name="x">The x axis of the coordinate for the text starting point.</param>
-        /// <param name="y">The y axis of the coordinate for the text starting point.</param>
-        /// <param name="maxWidth">
-        /// The maximum width to draw. If specified, and the string is computed to be wider than
-        /// this width, the font is adjusted to use a more horizontally condensed font (if one is
-        /// available or if a reasonably readable one can be synthesized by scaling the current
-        /// font horizontally) or a smaller font.
-        /// </param>
-        public virtual void StrokeText(string text, int x, int y, int? maxWidth = null)
+        public virtual void StrokeText(string text, Any<uint, int> x, Any<uint, int> y, Any<uint?, int?> maxWidth = null)
         {
             return;
         }
@@ -243,50 +168,7 @@ namespace Bridge.Html5
         /// of the array get copied and concatenated.
         /// For example, [5, 15, 25] will become [5, 15, 25, 5, 15, 25].
         /// </param>
-        public virtual void SetLineDash(double[] segments)
-        {
-            return;
-        }
-
-        /// <summary>
-        /// Sets the current line dash pattern.
-        /// </summary>
-        /// <param name="segments">
-        /// An Array. A list of numbers that specifies distances to alternately draw a line and a gap
-        /// (in coordinate space units). If the number of elements in the array is odd, the elements
-        /// of the array get copied and concatenated.
-        /// For example, [5, 15, 25] will become [5, 15, 25, 5, 15, 25].
-        /// </param>
-        public virtual void SetLineDash(uint[] segments)
-        {
-            return;
-        }
-
-        /// <summary>
-        /// Sets the current line dash pattern.
-        /// </summary>
-        /// <param name="segments">
-        /// An Array. A list of numbers that specifies distances to alternately draw a line and a gap
-        /// (in coordinate space units). If the number of elements in the array is odd, the elements
-        /// of the array get copied and concatenated.
-        /// For example, [5, 15, 25] will become [5, 15, 25, 5, 15, 25].
-        /// </param>
-        public virtual void SetLineDash(int[] segments)
-        {
-            return;
-        }
-
-        /// <summary>
-        /// Sets the current line dash pattern.
-        /// </summary>
-        /// <param name="segments">
-        /// An Array. A list of numbers that specifies distances to alternately draw a line and a gap
-        /// (in coordinate space units). If the number of elements in the array is odd, the elements
-        /// of the array get copied and concatenated.
-        /// For example, [5, 15, 25] will become [5, 15, 25, 5, 15, 25].
-        /// </param>
-        /// <remarks>Use this overload ONLY when you know what you're doing!</remarks>
-        public virtual void SetLineDash(string segments)
+        public virtual void SetLineDash(Any<double[], uint[], int[], IEnumerable<Any<double, uint, int>>> segments)
         {
             return;
         }
@@ -353,33 +235,8 @@ namespace Bridge.Html5
         /// <param name="x1">The x axis of the coordinate of the end point.</param>
         /// <param name="y1">The y axis of the coordinate of the end point.</param>
         /// <returns>A linear CanvasGradient initialized with the specified line.</returns>
-        public virtual CanvasGradient CreateLinearGradient(uint x0, uint y0, uint x1, uint y1)
-        {
-            return null;
-        }
-
-        /// <summary>
-        /// Creates a linear gradient along the line given by the coordinates represented by the parameters.
-        /// </summary>
-        /// <param name="x0">The x axis of the coordinate of the start point.</param>
-        /// <param name="y0">The y axis of the coordinate of the start point.</param>
-        /// <param name="x1">The x axis of the coordinate of the end point.</param>
-        /// <param name="y1">The y axis of the coordinate of the end point.</param>
-        /// <returns>A linear CanvasGradient initialized with the specified line.</returns>
-        public virtual CanvasGradient CreateLinearGradient(int x0, int y0, int x1, int y1)
-        {
-            return null;
-        }
-
-        /// <summary>
-        /// Creates a linear gradient along the line given by the coordinates represented by the parameters.
-        /// </summary>
-        /// <param name="x0">The x axis of the coordinate of the start point.</param>
-        /// <param name="y0">The y axis of the coordinate of the start point.</param>
-        /// <param name="x1">The x axis of the coordinate of the end point.</param>
-        /// <param name="y1">The y axis of the coordinate of the end point.</param>
-        /// <returns>A linear CanvasGradient initialized with the specified line.</returns>
-        public virtual CanvasGradient CreateLinearGradient(double x0, double y0, double x1, double y1)
+        public virtual CanvasGradient CreateLinearGradient(Any<uint, int, double> x0, Any<uint, int, double> y0,
+                                                           Any<uint, int, double> x1, Any<uint, int, double> y1)
         {
             return null;
         }
@@ -394,37 +251,9 @@ namespace Bridge.Html5
         /// <param name="y1">The y axis of the coordinate of the end circle.</param>
         /// <param name="r1">The radius of the end circle.</param>
         /// <returns>A radial CanvasGradient initialized with the two specified circles.</returns>
-        public virtual CanvasGradient CreateRadialGradient(uint x0, uint y0, uint r0, uint x1, uint y1, uint r1)
-        {
-            return null;
-        }
-
-        /// <summary>
-        /// Creates a radial gradient along the line given by the coordinates represented by the parameters.
-        /// </summary>
-        /// <param name="x0">The x axis of the coordinate of the start circle.</param>
-        /// <param name="y0">The y axis of the coordinate of the start circle.</param>
-        /// <param name="r0">The radius of the start circle.</param>
-        /// <param name="x1">The x axis of the coordinate of the end circle.</param>
-        /// <param name="y1">The y axis of the coordinate of the end circle.</param>
-        /// <param name="r1">The radius of the end circle.</param>
-        /// <returns>A radial CanvasGradient initialized with the two specified circles.</returns>
-        public virtual CanvasGradient CreateRadialGradient(int x0, int y0, int r0, int x1, int y1, int r1)
-        {
-            return null;
-        }
-
-        /// <summary>
-        /// Creates a radial gradient along the line given by the coordinates represented by the parameters.
-        /// </summary>
-        /// <param name="x0">The x axis of the coordinate of the start circle.</param>
-        /// <param name="y0">The y axis of the coordinate of the start circle.</param>
-        /// <param name="r0">The radius of the start circle.</param>
-        /// <param name="x1">The x axis of the coordinate of the end circle.</param>
-        /// <param name="y1">The y axis of the coordinate of the end circle.</param>
-        /// <param name="r1">The radius of the end circle.</param>
-        /// <returns>A radial CanvasGradient initialized with the two specified circles.</returns>
-        public virtual CanvasGradient CreateRadialGradient(double x0, double y0, double r0, double x1, double y1, double r1)
+        public virtual CanvasGradient CreateRadialGradient(
+            Any<uint, int, double> x0, Any<uint, int, double> y0, Any<uint, int, double> r0,
+            Any<uint, int, double> x1, Any<uint, int, double> y1, Any<uint, int, double> r1)
         {
             return null;
         }
@@ -439,7 +268,7 @@ namespace Bridge.Html5
         /// • HTMLVideoElement (<video>),
         /// • HTMLCanvasElement (<canvas>),
         /// • CanvasRenderingContext2D,
-        /// • ImageBitmap,
+        /// • ImageBitmap (c# object for now),
         /// • ImageData, or a
         /// • Blob.
         /// </param>
@@ -449,97 +278,9 @@ namespace Bridge.Html5
         /// At the time of implementation, ImageBitmap had no documentation and Bridge.NET did not have
         /// it defined inside.
         /// </remarks>
-        public virtual CanvasPattern CreatePattern(string image, CanvasTypes.CanvasRepetitionTypes repetition)
-        {
-            return null;
-        }
-
-        /// <summary>
-        /// Creates a pattern using the specified image (a CanvasImageSource). It repeats the source in the
-        /// directions specified by the repetition argument. This method returns a CanvasPattern.
-        /// </summary>
-        /// <param name="image">A ImageElement to be used as image to repeat.</param>
-        /// <param name="repetition">
-        /// A CanvasTypes.CanvasRepetitionType indicating how to repeat the image.
-        /// If repetition is an empty string ('') or null (but not undefined), repetition will be "repeat".
-        /// </param>
-        /// <returns>An opaque CanvasPattern object describing a pattern.</returns>
-        public virtual CanvasPattern CreatePattern(ImageElement image, CanvasTypes.CanvasRepetitionTypes repetition)
-        {
-            return null;
-        }
-
-        /// <summary>
-        /// Creates a pattern using the specified image (a CanvasImageSource). It repeats the source in the
-        /// directions specified by the repetition argument. This method returns a CanvasPattern.
-        /// </summary>
-        /// <param name="image">A VideoElement to be used as image to repeat.</param>
-        /// <param name="repetition">
-        /// A CanvasTypes.CanvasRepetitionType indicating how to repeat the image.
-        /// If repetition is an empty string ('') or null (but not undefined), repetition will be "repeat".
-        /// </param>
-        /// <returns>An opaque CanvasPattern object describing a pattern.</returns>
-        public virtual CanvasPattern CreatePattern(VideoElement image, CanvasTypes.CanvasRepetitionTypes repetition)
-        {
-            return null;
-        }
-
-        /// <summary>
-        /// Creates a pattern using the specified image (a CanvasImageSource). It repeats the source in the
-        /// directions specified by the repetition argument. This method returns a CanvasPattern.
-        /// </summary>
-        /// <param name="image">A CanvasElement to be used as image to repeat.</param>
-        /// <param name="repetition">
-        /// A CanvasTypes.CanvasRepetitionType indicating how to repeat the image.
-        /// If repetition is an empty string ('') or null (but not undefined), repetition will be "repeat".
-        /// </param>
-        /// <returns>An opaque CanvasPattern object describing a pattern.</returns>
-        public virtual CanvasPattern CreatePattern(CanvasElement image, CanvasTypes.CanvasRepetitionTypes repetition)
-        {
-            return null;
-        }
-
-        /// <summary>
-        /// Creates a pattern using the specified image (a CanvasImageSource). It repeats the source in the
-        /// directions specified by the repetition argument. This method returns a CanvasPattern.
-        /// </summary>
-        /// <param name="image">A CanvasRenderingContext2D to be used as image to repeat.</param>
-        /// <param name="repetition">
-        /// A CanvasTypes.CanvasRepetitionType indicating how to repeat the image.
-        /// If repetition is an empty string ('') or null (but not undefined), repetition will be "repeat".
-        /// </param>
-        /// <returns>An opaque CanvasPattern object describing a pattern.</returns>
-        public virtual CanvasPattern CreatePattern(CanvasRenderingContext2D image, CanvasTypes.CanvasRepetitionTypes repetition)
-        {
-            return null;
-        }
-
-        /// <summary>
-        /// Creates a pattern using the specified image (a CanvasImageSource). It repeats the source in the
-        /// directions specified by the repetition argument. This method returns a CanvasPattern.
-        /// </summary>
-        /// <param name="image">A ImageData object to be used as image to repeat.</param>
-        /// <param name="repetition">
-        /// A CanvasTypes.CanvasRepetitionType indicating how to repeat the image.
-        /// If repetition is an empty string ('') or null (but not undefined), repetition will be "repeat".
-        /// </param>
-        /// <returns>An opaque CanvasPattern object describing a pattern.</returns>
-        public virtual CanvasPattern CreatePattern(ImageData image, CanvasTypes.CanvasRepetitionTypes repetition)
-        {
-            return null;
-        }
-
-        /// <summary>
-        /// Creates a pattern using the specified image (a CanvasImageSource). It repeats the source in the
-        /// directions specified by the repetition argument. This method returns a CanvasPattern.
-        /// </summary>
-        /// <param name="image">A Blob to be used as image to repeat.</param>
-        /// <param name="repetition">
-        /// A CanvasTypes.CanvasRepetitionType indicating how to repeat the image.
-        /// If repetition is an empty string ('') or null (but not undefined), repetition will be "repeat".
-        /// </param>
-        /// <returns>An opaque CanvasPattern object describing a pattern.</returns>
-        public virtual CanvasPattern CreatePattern(Blob image, CanvasTypes.CanvasRepetitionTypes repetition)
+        public virtual CanvasPattern CreatePattern(
+            Any<ImageElement, VideoElement, CanvasElement, CanvasRenderingContext2D, object, ImageData, Blob> image,
+            CanvasTypes.CanvasRepetitionTypes repetition)
         {
             return null;
         }
@@ -721,38 +462,8 @@ namespace Bridge.Html5
         /// A Boolean, which is true if the specified point is contained in the current or specfied path,
         /// otherwise false.
         /// </returns>
-        public virtual bool IsPointInPath(uint x, uint y, CanvasTypes.CanvasFillRule? fillRule = null)
-        {
-            return false;
-        }
-
-        /// <summary>
-        /// Reports whether or not the specified point is contained in the current path.
-        /// </summary>
-        /// <param name="x">The X coordinate of the point to check.</param>
-        /// <param name="y">The Y coordinate of the point to check.</param>
-        /// <returns>
-        /// A Boolean, which is true if the specified point is contained in the current or specfied path,
-        /// otherwise false.
-        /// </returns>
-        public virtual bool IsPointInPath(int x, int y, CanvasTypes.CanvasFillRule? fillRule = null)
-        {
-            return false;
-        }
-
-        /// <summary>
-        /// Reports whether or not the specified point is contained in the current path.
-        /// </summary>
-        /// <param name="x">The X coordinate of the point to check.</param>
-        /// <param name="y">The Y coordinate of the point to check.</param>
-        /// <param name="fillRule">
-        /// The algorithm by which to determine if a point is inside a path or outside a path.
-        /// </param>
-        /// <returns>
-        /// A Boolean, which is true if the specified point is contained in the current or specfied path,
-        /// otherwise false.
-        /// </returns>
-        public virtual bool IsPointInPath(double x, double y, CanvasTypes.CanvasFillRule? fillRule = null)
+        public virtual bool IsPointInPath(Any<uint, int, double> x, Any<uint, int, double> y,
+                                          CanvasTypes.CanvasFillRule? fillRule = null)
         {
             return false;
         }
@@ -770,43 +481,8 @@ namespace Bridge.Html5
         /// A Boolean, which is true if the specified point is contained in the current or specfied path,
         /// otherwise false.
         /// </returns>
-        public virtual bool IsPointInPath(Path2D path, uint x, uint y, CanvasTypes.CanvasFillRule? fillRule = null)
-        {
-            return false;
-        }
-
-        /// <summary>
-        /// Reports whether or not the specified point is contained in the current path.
-        /// </summary>
-        /// <param name="path">A Path2D path to use.</param>
-        /// <param name="x">The X coordinate of the point to check.</param>
-        /// <param name="y">The Y coordinate of the point to check.</param>
-        /// <param name="fillRule">
-        /// The algorithm by which to determine if a point is inside a path or outside a path.
-        /// </param>
-        /// <returns>
-        /// A Boolean, which is true if the specified point is contained in the current or specfied path,
-        /// otherwise false.
-        /// </returns>
-        public virtual bool IsPointInPath(Path2D path, int x, int y, CanvasTypes.CanvasFillRule? fillRule = null)
-        {
-            return false;
-        }
-
-        /// <summary>
-        /// Reports whether or not the specified point is contained in the current path.
-        /// </summary>
-        /// <param name="path">A Path2D path to use.</param>
-        /// <param name="x">The X coordinate of the point to check.</param>
-        /// <param name="y">The Y coordinate of the point to check.</param>
-        /// <param name="fillRule">
-        /// The algorithm by which to determine if a point is inside a path or outside a path.
-        /// </param>
-        /// <returns>
-        /// A Boolean, which is true if the specified point is contained in the current or specfied path,
-        /// otherwise false.
-        /// </returns>
-        public virtual bool IsPointInPath(Path2D path, double x, double y, CanvasTypes.CanvasFillRule? fillRule = null)
+        public virtual bool IsPointInPath(Path2D path, Any<uint, int, double> x, Any<uint, int, double> y,
+                                          CanvasTypes.CanvasFillRule? fillRule = null)
         {
             return false;
         }
@@ -820,35 +496,7 @@ namespace Bridge.Html5
         /// A Boolean, which is true if the point is inside the area contained by the stroking of a path,
         /// otherwise false.
         /// </returns>
-        public virtual bool IsPointInStroke(uint x, uint y)
-        {
-            return false;
-        }
-
-        /// <summary>
-        /// Reports whether or not the specified point is inside the area contained by the stroking of a path.
-        /// </summary>
-        /// <param name="x">The X coordinate of the point to check.</param>
-        /// <param name="y">The Y coordinate of the point to check.</param>
-        /// <returns>
-        /// A Boolean, which is true if the point is inside the area contained by the stroking of a path,
-        /// otherwise false.
-        /// </returns>
-        public virtual bool IsPointInStroke(int x, int y)
-        {
-            return false;
-        }
-
-        /// <summary>
-        /// Reports whether or not the specified point is inside the area contained by the stroking of a path.
-        /// </summary>
-        /// <param name="x">The X coordinate of the point to check.</param>
-        /// <param name="y">The Y coordinate of the point to check.</param>
-        /// <returns>
-        /// A Boolean, which is true if the point is inside the area contained by the stroking of a path,
-        /// otherwise false.
-        /// </returns>
-        public virtual bool IsPointInStroke(double x, double y)
+        public virtual bool IsPointInStroke(Any<uint, int, double> x, Any<uint, int, double> y)
         {
             return false;
         }
@@ -863,37 +511,7 @@ namespace Bridge.Html5
         /// A Boolean, which is true if the point is inside the area contained by the stroking of a path,
         /// otherwise false.
         /// </returns>
-        public virtual bool IsPointInStroke(Path2D path, uint x, uint y)
-        {
-            return false;
-        }
-
-        /// <summary>
-        /// Reports whether or not the specified point is inside the area contained by the stroking of a path.
-        /// </summary>
-        /// <param name="path">A Path2D path to use.</param>
-        /// <param name="x">The X coordinate of the point to check.</param>
-        /// <param name="y">The Y coordinate of the point to check.</param>
-        /// <returns>
-        /// A Boolean, which is true if the point is inside the area contained by the stroking of a path,
-        /// otherwise false.
-        /// </returns>
-        public virtual bool IsPointInStroke(Path2D path, int x, int y)
-        {
-            return false;
-        }
-
-        /// <summary>
-        /// Reports whether or not the specified point is inside the area contained by the stroking of a path.
-        /// </summary>
-        /// <param name="path">A Path2D path to use.</param>
-        /// <param name="x">The X coordinate of the point to check.</param>
-        /// <param name="y">The Y coordinate of the point to check.</param>
-        /// <returns>
-        /// A Boolean, which is true if the point is inside the area contained by the stroking of a path,
-        /// otherwise false.
-        /// </returns>
-        public virtual bool IsPointInStroke(Path2D path, double x, double y)
+        public virtual bool IsPointInStroke(Path2D path, Any<uint, int, double> x, Any<uint, int, double> y)
         {
             return false;
         }
@@ -901,7 +519,11 @@ namespace Bridge.Html5
         #endregion
 
         /// <summary>
-        /// Objects in the CanvasRenderingContext2D rendering context have a current transformation matrix and methods to manipulate it. The transformation matrix is applied when creating the current default path, painting text, shapes and Path2D objects. The methods listed below remain for historical and compatibility reasons as SVGMatrix objects are used in most parts of the API nowadays and will be used in the future instead.
+        /// Objects in the CanvasRenderingContext2D rendering context have a current transformation matrix
+        /// and methods to manipulate it. The transformation matrix is applied when creating the current
+        /// default path, painting text, shapes and Path2D objects. The methods listed below remain for
+        /// historical and compatibility reasons as SVGMatrix objects are used in most parts of the API
+        /// nowadays and will be used in the future instead.
         /// </summary>
         #region Transformations
 
@@ -912,9 +534,14 @@ namespace Bridge.Html5
         public SVGMatrix CurrentTransform;
 
         /// <summary>
-        /// Adds a rotation to the transformation matrix. The angle argument represents a clockwise rotation angle and is expressed in radians.
+        /// Adds a rotation to the transformation matrix. The angle argument represents a clockwise rotation
+        /// angle and is expressed in radians.
         /// </summary>
-        public virtual void Rotate()
+        /// <param name="angle">
+        /// The angle to rotate clockwise in radians. You can use degree * Math.PI / 180 if you want to
+        /// calculate from a degree value.
+        /// </param>
+        public virtual void Rotate(double angle)
         {
             return;
         }
@@ -922,39 +549,59 @@ namespace Bridge.Html5
         /// <summary>
         /// Adds a scaling transformation to the canvas units by x horizontally and by y vertically.
         /// </summary>
-        public virtual void Scale()
+        /// <param name="x">Scaling factor in the horizontal direction.</param>
+        /// <param name="y">Scaling factor in the vertical direction.</param>
+        public virtual void Scale(Any<int, double> x, Any<int, double> y)
         {
             return;
         }
 
         /// <summary>
-        /// Adds a translation transformation by moving the canvas and its origin x horizontally and y vertically on the grid.
+        /// Adds a translation transformation by moving the canvas and its origin x horizontally and
+        /// y vertically on the grid.
         /// </summary>
-        public virtual void Translate(uint x, uint y)
+        /// <param name="x">Distance to move in the horizontal direction.</param>
+        /// <param name="y">Distance to move in the vertical direction.</param>
+        public virtual void Translate(Any<int, double> x, Any<int, double> y)
         {
             return;
         }
 
-        /// <summary>
-        /// Adds a translation transformation by moving the canvas and its origin x horizontally and y vertically on the grid.
-        /// </summary>
-        public virtual void Translate(double x, double y)
-        {
-            return;
-        }
-
+        /*
+         * Transformation matrix is described by:
+         * [ a c e ]
+         * [ b d f ]
+         * [ 0 0 1 ]
+         */
         /// <summary>
         /// Multiplies the current transformation matrix with the matrix described by its arguments.
+        /// Matrix is described by a 3x3 [ a c e // b d f // 0 0 1 ] (// means a matrix line break).
         /// </summary>
-        public virtual void Transform()
+        /// <param name="a">m11: Horizontal scaling.</param>
+        /// <param name="b">m12: Horizontal skewing.</param>
+        /// <param name="c">m21: Vertical skewing.</param>
+        /// <param name="d">m22: Vertical scaling.</param>
+        /// <param name="e">dx: Horizontal moving.</param>
+        /// <param name="f">dy: Vertical moving.</param>
+        public virtual void Transform(Any<int, double> a, Any<int, double> b, Any<int, double> c,
+                                      Any<int, double> d, Any<int, double> e, Any<int, double> f)
         {
             return;
         }
 
         /// <summary>
-        /// Resets the current transform to the identity matrix, and then invokes the transform() method with the same arguments.
+        /// Resets the current transform to the identity matrix, and then invokes the transform()
+        /// method with the same arguments.
+        /// Matrix is described by a 3x3 [ a c e // b d f // 0 0 1 ] (// means a matrix line break).
         /// </summary>
-        public virtual void SetTransfrom()
+        /// <param name="a">m11: Horizontal scaling.</param>
+        /// <param name="b">m12: Horizontal skewing.</param>
+        /// <param name="c">m21: Vertical skewing.</param>
+        /// <param name="d">m22: Vertical scaling.</param>
+        /// <param name="e">dx: Horizontal moving.</param>
+        /// <param name="f">dy: Vertical moving.</param>
+        public virtual void SetTransfrom(Any<int, double> a, Any<int, double> b, Any<int, double> c,
+                                         Any<int, double> d, Any<int, double> e, Any<int, double> f)
         {
             return;
         }
@@ -973,7 +620,8 @@ namespace Bridge.Html5
         #region Composing
 
         /// <summary>
-        /// Alpha value that is applied to shapes and images before they are composited onto the canvas. Default 1.0 (opaque).
+        /// Alpha value that is applied to shapes and images before they are composited onto the canvas.
+        /// Default 1.0 (opaque).
         /// </summary>
         public float GlobalAlpha;
 
@@ -987,9 +635,132 @@ namespace Bridge.Html5
         #region Drawing Images
 
         /// <summary>
-        /// Draws the specified image. This method is available in multiple formats, providing a great deal of flexibility in its use.
+        /// Draws the specified image. This method is available in multiple formats, providing a great
+        /// deal of flexibility in its use.
         /// </summary>
-        public virtual void DrawImage()
+        /// <param name="image">
+        /// An element to draw into the context. The specification permits any canvas image source.
+        /// </param>
+        /// <param name="dx">
+        /// The X coordinate in the destination canvas at which to place the top-left corner of the source image.
+        /// </param>
+        /// <param name="dy">
+        /// The Y coordinate in the destination canvas at which to place the top-left corner of the source image.
+        /// </param>
+        public virtual void DrawImage(Any<ImageElement, VideoElement, CanvasElement, CanvasRenderingContext2D> image,
+                                      Any<int, long, float, double> dx, Any<int, long, float, double> dy)
+        {
+            return;
+        }
+
+        /// <summary>
+        /// Draws the specified image. This method is available in multiple formats, providing a great
+        /// deal of flexibility in its use.
+        /// </summary>
+        /// <param name="image">
+        /// An element to draw into the context. The specification permits any canvas image source.
+        /// </param>
+        /// <param name="dx">
+        /// The X coordinate in the destination canvas at which to place the top-left corner of the source image.
+        /// </param>
+        /// <param name="dy">
+        /// The Y coordinate in the destination canvas at which to place the top-left corner of the source image.
+        /// </param>
+        /// <param name="dWidth">
+        /// The width to draw the image in the destination canvas. This allows scaling of the drawn image.
+        /// If null, the image is not scaled in height when drawn.
+        /// </param>
+        /// <param name="dHeight">
+        /// The height to draw the image in the destination canvas. This allows scaling of the drawn image.
+        /// If null, the image is not scaled in height when drawn.
+        /// </param>
+        public virtual void DrawImage(Any<ImageElement, VideoElement, CanvasElement, CanvasRenderingContext2D> image,
+                                      Any<int, long, float, double> dx, Any<int, long, float, double> dy,
+                                      Any<int?, long?, float?, double?> dWidth, Any<int?, long?, float?, double?> dHeight)
+        {
+            return;
+        }
+
+        /// <summary>
+        /// Draws the specified image. This method is available in multiple formats, providing a great
+        /// deal of flexibility in its use.
+        /// </summary>
+        /// <param name="image">
+        /// An element to draw into the context. The specification permits any canvas image source.
+        /// </param>
+        /// <param name="sx">
+        /// The X coordinate of the top left corner of the sub-rectangle of the source image to draw into
+        /// the destination context.
+        /// </param>
+        /// <param name="sy">
+        /// The Y coordinate of the top left corner of the sub-rectangle of the source image to draw into
+        /// the destination context.
+        /// </param>
+        /// <param name="dx">
+        /// The X coordinate in the destination canvas at which to place the top-left corner of the source image.
+        /// </param>
+        /// <param name="dy">
+        /// The Y coordinate in the destination canvas at which to place the top-left corner of the source image.
+        // </param>
+        /// <param name="dWidth">
+        /// The width to draw the image in the destination canvas. This allows scaling of the drawn image.
+        /// If not specified or null, the image is not scaled in height when drawn.
+        /// </param>
+        /// <param name="dHeight">
+        /// The height to draw the image in the destination canvas. This allows scaling of the drawn image.
+        /// If not specified or null, the image is not scaled in height when drawn.
+        /// </param>
+        public virtual void DrawImage(Any<ImageElement, VideoElement, CanvasElement, CanvasRenderingContext2D> image,
+                                      Any<int, long, float, double> sx, Any<int, long, float, double> sy,
+                                      Any<int, long, float, double> dx, Any<int, long, float, double> dy,
+                                      Any<int?, long?, float?, double?> dWidth = null,
+                                      Any<int?, long?, float?, double?> dHeight = null)
+        {
+            return;
+        }
+
+        /// <summary>
+        /// Draws the specified image. This method is available in multiple formats, providing a great
+        /// deal of flexibility in its use.
+        /// </summary>
+        /// <param name="image">
+        /// An element to draw into the context. The specification permits any canvas image source.
+        /// </param>
+        /// <param name="sx">
+        /// The X coordinate of the top left corner of the sub-rectangle of the source image to draw into
+        /// the destination context.
+        /// </param>
+        /// <param name="sy">
+        /// The Y coordinate of the top left corner of the sub-rectangle of the source image to draw into
+        /// the destination context.
+        /// </param>
+        /// <param name="sWidth">
+        /// The width of the sub-rectangle of the source image to draw into the destination context.
+        /// </param>
+        /// <param name="sHeight">
+        /// The height of the sub-rectangle of the source image to draw into the destination context.
+        /// </param>
+        /// <param name="dx">
+        /// The X coordinate in the destination canvas at which to place the top-left corner of the source image.
+        /// </param>
+        /// <param name="dy">
+        /// The Y coordinate in the destination canvas at which to place the top-left corner of the source image.
+        // </param>
+        /// <param name="dWidth">
+        /// The width to draw the image in the destination canvas. This allows scaling of the drawn image.
+        /// If not specified or null, the image is not scaled in height when drawn.
+        /// </param>
+        /// <param name="dHeight">
+        /// The height to draw the image in the destination canvas. This allows scaling of the drawn image.
+        /// If not specified or null, the image is not scaled in height when drawn.
+        /// </param>
+        public virtual void DrawImage(Any<ImageElement, VideoElement, CanvasElement, CanvasRenderingContext2D> image,
+                                      Any<int, long, float, double> sx, Any<int, long, float, double> sy,
+                                      Any<int?, long?, float?, double?> sWidth,
+                                      Any<int?, long?, float?, double?> sHeight,
+                                      Any<int, long, float, double> dx, Any<int, long, float, double> dy,
+                                      Any<int?, long?, float?, double?> dWidth = null,
+                                      Any<int?, long?, float?, double?> dHeight = null)
         {
             return;
         }
@@ -1002,25 +773,88 @@ namespace Bridge.Html5
         #region Pixel Manipulation
 
         /// <summary>
-        /// Creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black.
+        /// Creates a new, blank ImageData object with the specified dimensions. All of the pixels in the
+        /// new object are transparent black.
         /// </summary>
-        public virtual void CreateImageData()
+        /// <param name="width">The width to give the new ImageData object.</param>
+        /// <param name="height">The height to give the new ImageData object.</param>
+        /// <returns>
+        /// A new ImageData object with the specified width and height. The new object is filled with
+        /// transparent black pixels.
+        /// </returns>
+        public virtual ImageData CreateImageData(Any<uint, int> width, Any<uint, int> height)
         {
-            return;
+            return null;
         }
 
         /// <summary>
-        /// Returns an ImageData object representing the underlying pixel data for the area of the canvas denoted by the rectangle which starts at (sx, sy) and has an sw width and sh height.
+        /// Creates a new, blank ImageData object with the specified dimensions. All of the pixels in the
+        /// new object are transparent black.
         /// </summary>
-        public virtual void GetImageData()
+        /// <param name="imagedata">
+        /// An existing ImageData object from which to copy the width and height. The image itself is not copied.
+        /// </param>
+        /// <returns>
+        /// A new ImageData object with the specified width and height. The new object is filled with
+        /// transparent black pixels.
+        // </returns>
+        public virtual ImageData CreateImageData(ImageData imagedata)
         {
-            return;
+            return null;
         }
 
         /// <summary>
-        /// Paints data from the given ImageData object onto the bitmap. If a dirty rectangle is provided, only the pixels from that rectangle are painted.
+        /// Returns an ImageData object representing the underlying pixel data for the area of the canvas
+        /// denoted by the rectangle which starts at (sx, sy) and has an sw width and sh height.
         /// </summary>
-        public virtual void PutImageData()
+        /// <param name="sx">
+        /// The x axis of the coordinate for the rectangle startpoint from which the ImageData will be extracted.
+        /// </param>
+        /// <param name="sy">
+        /// The y axis of the coordinate for the rectangle endpoint from which the ImageData will be extracted.
+        /// </param>
+        /// <param name="sw">
+        /// The width of the rectangle from which the ImageData will be extracted.
+        /// </param>
+        /// <param name="sh">
+        /// The height of the rectangle from which the ImageData will be extracted.
+        /// </param>
+        /// <returns></returns>
+        public virtual ImageData GetImageData(Any<uint, int> sx, Any<uint, int> sy, Any<uint, int> sw, Any<uint, int> sh)
+        {
+            return null;
+        }
+
+        /// <summary>
+        /// Paints data from the given ImageData object onto the bitmap. If a dirty rectangle is provided,
+        /// only the pixels from that rectangle are painted.
+        /// </summary>
+        /// <param name="imagedata">An imageData object containing the array of pixel values.</param>
+        /// <param name="dx">
+        /// Position offset in the target canvas context of the rectangle to be painted, relative to the
+        /// rectangle in the origin image data.
+        /// </param>
+        /// <param name="dy">
+        /// Position offset in the target canvas context of the rectangle to be painted, relative to the
+        /// rectangle in the origin image data.
+        /// </param>
+        /// <param name="dirtyX">
+        /// Position of the top left point of the rectangle to be painted, in the origin image data.
+        /// Defaults to the top left of the whole image data.
+        /// </param>
+        /// <param name="dirtyY">
+        /// Position of the top left point of the rectangle to be painted, in the origin image data.
+        /// Defaults to the top left of the whole image data.
+        /// </param>
+        /// <param name="dirtyWidth">
+        /// Width of the rectangle to be painted, in the origin image data. Defaults to the width of the image data.
+        /// </param>
+        /// <param name="dirtyHeight">
+        /// Height of the rectangle to be painted, in the origin image data. Defaults to the height of the image data.
+        /// </param>
+        public virtual void PutImageData(ImageData imagedata, int dx, int dy, Any<uint?, int?> dirtyX = null,
+                                         Any<uint?, int?> dirtyY = null, Any<uint?, int?> dirtyWidth = null,
+                                         Any<uint?, int?> dirtyHeight = null)
         {
             return;
         }
@@ -1038,8 +872,9 @@ namespace Bridge.Html5
         #endregion
 
         /// <summary>
-        /// The CanvasRenderingContext2D rendering context contains a variety of drawing style states (attributes for
-        /// line styles, fill styles, shadow styles, text styles). The following methods help you to work with that state
+        /// The CanvasRenderingContext2D rendering context contains a variety of drawing style states
+        /// (attributes for line styles, fill styles, shadow styles, text styles). The following methods
+        /// help you to work with that state.
         /// </summary>
         #region Canvas State
 
@@ -1072,8 +907,12 @@ namespace Bridge.Html5
         /// <summary>
         /// Adds a hit region to the canvas.
         /// </summary>
+        /// <param name="options">
+        /// The options argument is optional. When provided, it is an CanvasHitRegionOptions
+        /// object with one or more of its properties set.
+        /// </param>
         /// <remarks>This is experimental API that should not be used in production code.</remarks>
-        public virtual void AddHitRegion()
+        public virtual void AddHitRegion(CanvasHitRegionOptions options = null)
         {
             return;
         }
@@ -1081,8 +920,9 @@ namespace Bridge.Html5
         /// <summary>
         /// Removes the hit region with the specified id from the canvas.
         /// </summary>
+        /// <param name="id">A DOMString representing the id of the region that is to be removed.</param>
         /// <remarks>This is experimental API that should not be used in production code.</remarks>
-        public virtual void RemoveHitRegion()
+        public virtual void RemoveHitRegion(string id)
         {
             return;
         }
@@ -1105,5 +945,55 @@ namespace Bridge.Html5
         /// Most of these APIs are deprecated and will be removed in the future.
         /// </summary>
         #endregion
+
+        // FIXME: Find a better place to define this class on. It is not an interface neither an element, but an
+        //        auxiliary object, used only on CanvasRenderingContext2D.
+        [Ignore]
+        [Name("Object")]
+        public class CanvasHitRegionOptions
+        {
+            /// <summary>
+            /// A Path2D object describing the area of the hit region. If not provided, the current path is used.
+            /// </summary>
+            public Path2D Path { get; set; }
+
+            /// <summary>
+            /// The fill rule to use (defaults to "nonzero").
+            /// </summary>
+            public CanvasTypes.CanvasFillRule fillRule { get; set; }
+
+            /// <summary>
+            /// The ID for this hit region to reference it for later use in events, for example.
+            /// </summary>
+            public string Id { get; set; }
+
+            /// <summary>
+            /// The ID of the parent region for cursor fallback and navigation by accessibility tools.
+            /// </summary>
+            public string ParentID { get; set; }
+
+            /// <summary>
+            /// The cursor to use when the mouse is over this region (defaults to "inherit").
+            /// Inherits the cursor of the parent hit region, if any, or the canvas element's cursor.
+            /// </summary>
+            public Cursor Cursor { get; set; } // FIXME: CSS/Cursor.cs has no 'inherit' option!
+
+            /// <summary>
+            /// An element (descendant of the canvas) to which events are to be routed. Defaults to null.
+            /// </summary>
+            public Element Control { get; set; }
+
+            /// <summary>
+            /// A text label for accessibility tools to use as a description of the region,
+            /// if there is no control. Defaults to null.
+            /// </summary>
+            public string Label { get; set; }
+
+            /// <summary>
+            /// An ARIA role for accessibility tools to determine how to represent this region,
+            /// if there is no control. Defaults to null.
+            /// </summary>
+            public string role { get; set; }
+        }
     }
 }
